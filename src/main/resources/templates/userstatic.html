@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户统计信息</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>用户ID</th>
+        <th>用户名</th>
+        <th>电话</th>
+    </tr>
+    <tr th:each = "user : ${users}">
+        <td th:text="${user.id}">1</td>
+        <td th:text="${user.name}">${user.name}</td>
+        <td th:text="${user.phone}">phone</td>
+    </tr>
+</table>
+当前在线用户人数：<td th:text="${count}">count</td>
+</body>
+</html>
