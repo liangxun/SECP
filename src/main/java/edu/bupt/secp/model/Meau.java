@@ -10,9 +10,6 @@ public class Meau {
     private Integer id;
 
     @Column(nullable = false)
-    private Integer user_id;
-
-    @Column(nullable = false)
     private Integer restaurant_id;
 
     @Column(nullable = false)
@@ -32,14 +29,6 @@ public class Meau {
 
     public void setId(Integer id) {
         this.id = id;
-    }
-
-    public Integer getUser_id() {
-        return user_id;
-    }
-
-    public void setUser_id(Integer user_id) {
-        this.user_id = user_id;
     }
 
     public Integer getRestaurant_id() {
