@@ -1,6 +1,5 @@
 package edu.bupt.secp;
 
-import edu.bupt.secp.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -28,7 +27,8 @@ public class UserController {
     }
 
     @RequestMapping(value="list", method = RequestMethod.GET)
-    public List<User> all_users(){
-        return  (List<User>) userRepository.findAll();
+    public List<User> all_users(@RequestParam Integer n){
+        //return  (List<User>) userRepository.findAll();
+        return userRepository.findTopN(n);
     }
 }
