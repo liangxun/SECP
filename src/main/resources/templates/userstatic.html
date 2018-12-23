@@ -10,11 +10,13 @@
         <th>用户ID</th>
         <th>用户名</th>
         <th>电话</th>
+        <th>账户余额</th>
     </tr>
     <tr th:each = "user : ${users}">
         <td th:text="${user.id}">1</td>
         <td th:text="${user.name}">${user.name}</td>
         <td th:text="${user.phone}">phone</td>
+        <td th:text="${user.accout}">accout</td>
     </tr>
 </table>
 当前在线用户人数：<td th:text="${count}">count</td>
