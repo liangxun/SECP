@@ -22,6 +22,7 @@ public class RestaurantController {
         n.setName(name);
         n.setPassword(password);
         n.setPhone(phone);
+        n.setAccout(1000);
         restaurantRepository.save(n);
         return "savd";
     }

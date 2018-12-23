@@ -18,7 +18,8 @@ public class MeauController {
     public @ResponseBody String addNewMeau(@RequestParam Integer restaurant_id,
                                            @RequestParam String name,
                                            @RequestParam Float price,
-                                           @RequestParam String brief,@RequestParam String image_addr){
+                                           @RequestParam String brief,
+                                           @RequestParam String image_addr){
         Meau n = new Meau();
         n.setName(name);
         n.setRestaurant_id(restaurant_id);

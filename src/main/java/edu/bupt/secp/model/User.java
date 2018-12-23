@@ -16,6 +16,16 @@ public class User {
     @Column(unique = true, length = 11)
     private String phone;
 
+    private Integer accout;
+
+    public Integer getAccout(){
+        return accout;
+    }
+
+    public void setAccout(Integer accout){
+        this.accout = accout;
+    }
+
     public Integer getId(){
         return id;
     }

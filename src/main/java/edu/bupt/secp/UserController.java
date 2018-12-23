@@ -14,7 +14,7 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
 
-    @RequestMapping(value="add")
+    @RequestMapping(value="register")
     public @ResponseBody String addNewUser(@RequestParam String name,
                                            @RequestParam String password,
                                            @RequestParam String phone){
@@ -22,6 +22,7 @@ public class UserController {
         n.setName(name);
         n.setPassword(password);
         n.setPhone(phone);
+        n.setAccout(10000);
         userRepository.save(n);
         return "saved";
     }
