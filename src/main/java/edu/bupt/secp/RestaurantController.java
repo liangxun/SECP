@@ -23,7 +23,7 @@ public class RestaurantController {
         n.setPassword(password);
         n.setPhone(phone);
         restaurantRepository.save(n);
-        return "saved";
+        return "savd";
     }
 
     @RequestMapping(value="list", method = RequestMethod.GET)
