@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商家统计信息</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>用户ID</th>
+        <th>用户名</th>
+        <th>联系电话</th>
+        <th>账户余额</th>
+    </tr>
+    <tr th:each = "restaurant : ${restaurants}">
+        <td th:text="${restaurant.id}">1</td>
+        <td th:text="${restaurant.name}">${user.name}</td>
+        <td th:text="${restaurant.phone}">phone</td>
+        <td th:text="${restaurant.accout}">0</td>
+    </tr>
+</table>
+当前在线商家数：<td th:text="${count}">count</td>
+</body>
+</html>
