@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import edu.bupt.secp.model.User;
 import edu.bupt.secp.model.UserRepository;
 
-import java.util.List;
+import java.util.*;
 
 @RestController
 @RequestMapping("/user")
@@ -15,16 +15,22 @@ public class UserController {
     private UserRepository userRepository;
 
     @RequestMapping(value="register")
-    public @ResponseBody String addNewUser(@RequestParam String name,
+    public List<String> addNewUser(@RequestParam String name,
                                            @RequestParam String password,
                                            @RequestParam String phone){
         User n = new User();
         n.setName(name);
         n.setPassword(password);
-        n.setPhone(phone);
+        if (phone == "") {
+            n.setPhone("18811376899");
+        }else{
+            n.setPhone(phone);
+        }
         n.setAccout(10000);
         userRepository.save(n);
-        return "saved";
+        List<String> ret= new ArrayList<>();
+        ret.add("saved");
+        return ret;
     }
 
     @RequestMapping(value="list", method = RequestMethod.GET)

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加菜品</title>
+</head>
+<body>
+<form action="/meau/add" enctype="multipart/form-data" method="post">
+    商家ID：<input type="text" name="restaurant_id" />
+    菜品名称：<input type="text" name="name" />
+    价格：<input type="text" name="price" />
+    介绍:<input type="text" name="brief" />
+    菜品图片 <input type="file" name="image">
+    <input type="submit" value="添加菜品" />
+</form>
+</body>
+</html>
