@@ -15,7 +15,7 @@ public class UserController {
     private UserRepository userRepository;
 
     @RequestMapping(value="register")
-    public List<String> addNewUser(@RequestParam String name,
+    public Integer addNewUser(@RequestParam String name,
                                            @RequestParam String password,
                                            @RequestParam String phone){
         User n = new User();
@@ -28,9 +28,16 @@ public class UserController {
         }
         n.setAccout(10000);
         userRepository.save(n);
-        List<String> ret= new ArrayList<>();
-        ret.add("saved");
-        return ret;
+        //List<String> ret= new ArrayList<>();
+        //ret.add("saved");
+        Integer id = userRepository.findIdbyName(name);
+        return id;
+    }
+
+    @RequestMapping(value = "login", method = RequestMethod.GET)
+    public String login(@RequestParam String name,
+                        @RequestParam String password){
+        return "legal";
     }
 
     @RequestMapping(value="list", method = RequestMethod.GET)

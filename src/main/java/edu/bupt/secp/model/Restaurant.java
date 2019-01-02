@@ -13,10 +13,21 @@ public class Restaurant {
 
     private String password;
 
-    @Column(unique = true, length = 11)
+    @Column(length = 11)
     private String phone;
 
     private Integer accout;
+
+    private String image_addr;
+
+    public String getImage_addr() {
+        return image_addr;
+    }
+
+    public void setImage_addr(String image_addr) {
+        this.image_addr = image_addr;
+    }
+
 
     public Integer getAccout(){
         return accout;

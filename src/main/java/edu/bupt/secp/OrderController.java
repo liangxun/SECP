@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.naming.ldap.PagedResultsControl;
 import javax.persistence.Id;
+import java.util.List;
 
 @RestController
 @RequestMapping(value = "/order")
@@ -22,8 +23,10 @@ public class OrderController {
     // 给商家发送提醒
     // 返回用户订单号
     @RequestMapping(value = "submit")
-    public Integer submit(@RequestParam float bill){
-        return 123;
+    public String submit( @RequestParam Integer restaurant_id,
+                          @RequestParam String meaus,
+                          @RequestParam String time){
+        return "order";
     }
 
     // 确认收款

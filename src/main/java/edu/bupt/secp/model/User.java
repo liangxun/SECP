@@ -13,7 +13,6 @@ public class User {
 
     private String password;
 
-    @Column(unique = true, length = 11)
     private String phone;
 
     private Integer accout;
